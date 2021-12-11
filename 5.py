@@ -329,7 +329,7 @@ class MySM2:
         '''
         # 计算d倍点
         d = self.randint_gen(1, self.__ec_n-2) # 获取随机数d∈[1, n-1]
-        d = 0x1649AB77A00637BD5E2EFE283FBF353534AA7F7CB89463F208DDBC2920BB0DA0
+        #d = 0x1649AB77A00637BD5E2EFE283FBF353534AA7F7CB89463F208DDBC2920BB0DA0
         self.__private_key = d
         #print(f"私钥 d: {hex(d)}")
         P = self._ktimes_point(self.__ec_base_G, d)
@@ -351,7 +351,7 @@ class MySM2:
         while True:
             # 取随机数k∈[1, n-1]
             k = self.randint_gen(1, self.__ec_n) 
-            k = 0x4C62EEFD6ECFC2B95B92FD6C3D9575148AFA17425546D49018E5388D49DD7B4F
+            #k = 0x4C62EEFD6ECFC2B95B92FD6C3D9575148AFA17425546D49018E5388D49DD7B4F
             # 计算G的K倍点为C1，并转化为比特串
             C1 = self._ktimes_point(self.__ec_base_G, k) 
             C1 = self.BytesToBits(self.PointToBytes(C1))
